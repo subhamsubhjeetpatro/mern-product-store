@@ -1,8 +1,9 @@
+import React from "react";
 import { Box, useColorModeValue } from "@chakra-ui/react";
 import { Route, Routes } from "react-router-dom";
-import Homepage from "./pages/Homepage";
-import CreatePage from "./pages/CreatePage";
+const CreatePage = React.lazy(() => import("./pages/CreatePage"));
 import Navbar from "./components/Navbar";
+const Homepage = React.lazy(() => import("./pages/Homepage"));
 
 function App() {
   return (

@@ -3,7 +3,7 @@ import { Container, SimpleGrid, Text } from "@chakra-ui/react";
 import { VStack } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 import useProductStore from "../store/product";
-import ProductCard from "../components/ProductCard";
+const ProductCard = React.lazy(() => import("../components/ProductCard"));
 
 const Homepage = () => {
   const { fetchProducts, products } = useProductStore();

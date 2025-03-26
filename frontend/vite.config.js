@@ -11,4 +11,16 @@ export default defineConfig({
       },
     },
   },
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          // Split large dependencies into separate chunks
+          vendor: ["react", "react-dom"],
+          // Add other large dependencies if needed (e.g., "lodash", "axios")
+        },
+      },
+    },
+    chunkSizeWarningLimit: 600, // Increase limit to 600 kB (optional)
+  },
 });
