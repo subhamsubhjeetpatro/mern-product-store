@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import useProductStore from "../store/product";
 const ProductCard = React.lazy(() => import("../components/ProductCard"));
 
-const Homepage = () => {
+const HomePage = () => {
   const { fetchProducts, products } = useProductStore();
   useEffect(() => {
     fetchProducts();
@@ -63,4 +63,4 @@ const Homepage = () => {
   );
 };
 
-export default Homepage;
+export default HomePage;

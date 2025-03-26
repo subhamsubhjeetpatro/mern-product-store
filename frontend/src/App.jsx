@@ -3,7 +3,7 @@ import { Box, useColorModeValue } from "@chakra-ui/react";
 import { Route, Routes } from "react-router-dom";
 const CreatePage = React.lazy(() => import("./pages/CreatePage"));
 import Navbar from "./components/Navbar";
-const Homepage = React.lazy(() => import("./pages/Homepage"));
+const HomePage = React.lazy(() => import("./pages/HomePage"));
 
 function App() {
   return (
@@ -11,7 +11,7 @@ function App() {
       {/* Navbar */}
       <Navbar />
       <Routes>
-        <Route path="/" element={<Homepage />} />
+        <Route path="/" element={<HomePage />} />
         <Route path="/create" element={<CreatePage />} />
       </Routes>
     </Box>
